@@ -9,6 +9,7 @@ const Feedback = ({
   onHandleGood,
   onHandleNeutral,
   onHandleBad,
+  onCountTotal,
 }) => (
   <>
     <div className={s.btnGroup}>

@@ -26,12 +26,13 @@ class App extends Component {
       return { bad: prevState.bad + 1 };
     });
   };
-  // countTotalFeedback = () => {
-  //   const { good, neutral, bad } = this.state;
-  //   return good + neutral + bad;
-  // };
+  countTotalFeedback = () => {
+    const { good, neutral, bad } = this.state;
+    return good + neutral + bad;
+  };
   render() {
     const { good, neutral, bad } = this.state;
+    const countTotalFeedback = this.countTotalFeedback();
 
     return (
       <Container>
@@ -44,10 +45,11 @@ class App extends Component {
           onHandleGood={this.handleClickGood}
           onHandleNeutral={this.handleClickNeutral}
           onHandleBad={this.handleClickBad}
+          onCountTotal={this.countTotalFeedback}
         />
         <div className={s.statisticItem}>
           <p className={s.name}>Total:</p>
-          <span className={s.value}>{good + neutral + bad}</span>
+          <span className={s.value}>{countTotalFeedback}</span>
         </div>
       </Container>
     );
