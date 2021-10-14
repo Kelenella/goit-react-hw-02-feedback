@@ -1,28 +1,3 @@
-.btnGroup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 250px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.btn {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-family: "Montserrat";
-}
-.btn:not(:last-child) {
-  margin-right: 20px;
-}
-.title {
-  font-family: "Montserrat";
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 5px;
-  padding: 1px;
-  font-size: 28px;
-  font-weight: 700;
-}
 .statisticList {
   margin-left: auto;
   margin-right: auto;
@@ -34,11 +9,15 @@
 }
 .statisticItem {
   margin-right: 20px;
+  margin-bottom: 30px;
   text-align: center;
   align-items: center;
   font-family: "Montserrat";
+  font-size: 16px;
+  font-family: "Montserrat";
+  text-align: center;
 }
-.name {
+/* .name {
   font-size: 16px;
   font-family: "Montserrat";
   text-align: center;
@@ -48,4 +27,4 @@
   font-family: "Montserrat";
   text-align: center;
   font-weight: 500;
-}
+} */

@@ -1,15 +1,28 @@
+import React from "react";
 import PropTypes from "prop-types";
 import s from "./FeedbackOptions.module.css";
 
-export default function FeedbackOptions(props) {
-  return (
-    <div>
-      <h2>Please leave feedback</h2>
-      <div>
-        <button>Good</button>
-        <button>Neutral</button>
-        <button>Bad</button>
-      </div>
+const FeedbackOptions = ({ feedbacks, onFeedbackValue }) => (
+  <>
+    <div className={s.btnGroup}>
+      {feedbacks.map((feedback) => (
+        <button
+          key={feedback}
+          className={s.btn}
+          type="button"
+          value={feedback}
+          onClick={onFeedbackValue}
+        >
+          {feedback}
+        </button>
+      ))}
     </div>
-  );
-}
+  </>
+);
+
+FeedbackOptions.propTypes = {
+  feedbacks: PropTypes.array,
+  onFeedbackValue: PropTypes.func.isRequired,
+};
+
+export default FeedbackOptions;
